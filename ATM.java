@@ -22,8 +22,7 @@ import java.util.*;
              case 2: System.out.println("Enter Amount To Withdraw");
                       account.withdraw(sc.nextDouble());
                        break;
-             case 3: System.out.println("Enter Amount To Deposit");
-                      account.checkbalance();
+             case 3: account.checkbalance();
                      break;
              case 0: System.out.println("Thank You..!");
                      break;
@@ -35,7 +34,7 @@ class BankAccount{
    private double balance=10000;
     void deposit(double amount){
        balance+=amount;
-       System.out.println("₹"+amount+" Added Succesfully");
+       System.out.println("RS."+amount+" Added Succesfully");
        checkbalance();
     }
     void withdraw(double amount){
@@ -45,12 +44,12 @@ class BankAccount{
        }
        else{
        balance-=amount;
-          System.out.println("₹"+amount+" Withdraw Succesfully");
+          System.out.println("RS."+amount+" Withdraw Succesfully");
        checkbalance();
        }
     }
    void checkbalance(){
-      System.out.println("Total Balance Now-₹"+balance);
+      System.out.println("Total Balance Now-RS."+balance);
    }
 }
 
